@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Release.Name }}-config
+data:
+  conf.yaml: |
+    {{ .Files.Get "../files/config.yaml" | indent 4 }}

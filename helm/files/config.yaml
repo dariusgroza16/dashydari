@@ -1,0 +1,149 @@
+pageInfo:
+  title: Dashy Dary
+sections:
+  - name: Docs Section
+    icon: far fa-rocket
+    items:
+      - &ref_0
+        title: GitHub Project
+        description: Dashy Darius source code
+        icon: fab fa-github
+        url: https://github.com/dariusgroza16/dashydari
+        id: 0_1150_githubproject
+      - &ref_1
+        title: Issues
+        description: View open issues, or raise a new one
+        icon: fas fa-bug
+        url: https://github.com/Lissy93/dashy/issues
+        id: 1_1150_issues
+    filteredItems:
+      - *ref_0
+      - *ref_1
+appConfig:
+  theme: vaporware
+  customColors:
+    default:
+      primary: '#985ceb'
+      background: '#5cdfeb'
+      background-darker: '#313941'
+      info: '#04e4f4'
+      success: '#20e253'
+      warning: '#f6f000'
+      error: '#fca016'
+      danger: '#f80363'
+      neutral: '#272f4d'
+      white: '#fff'
+      black: '#000'
+      item-group-background: rgba(11,16,33,0.8)
+      medium-grey: '#5e6474'
+      item-background: rgba(96,125,139,0.2)
+      item-background-hover: rgba(96,125,139,0.30196078431372547)
+      transparent-70: rgba(0,0,0,0.7019607843137254)
+      transparent-50: rgba(0,0,0,0.5019607843137255)
+      transparent-30: rgba(0,0,0,0.30196078431372547)
+      transparent-white-70: hsla(0,0%,100%,0.7019607843137254)
+      transparent-white-50: hsla(0,0%,100%,0.5019607843137255)
+      transparent-white-30: hsla(0,0%,100%,0.30196078431372547)
+      transparent-white-10: hsla(0,0%,100%,0.058823529411764705)
+      heading-text-color: '#985ceb'
+      nav-link-text-color: '#985ceb'
+      nav-link-background-color: rgba(96,125,139,0.2)
+      nav-link-text-color-hover: '#985ceb'
+      nav-link-background-color-hover: rgba(96,125,139,0.2)
+      nav-link-border-color: transparent
+      nav-link-border-color-hover: '#985ceb'
+      nav-link-shadow: '1px 1px 2px #232323'
+      nav-link-shadow-hover: '1px 1px 2px #232323'
+      item-text-color: '#985ceb'
+      item-text-color-hover: '#985ceb'
+      item-group-outer-background: '#985ceb'
+      item-group-heading-text-color: rgba(11,16,33,0.8)
+      item-group-heading-text-color-hover: '#5cdfeb'
+      settings-text-color: '#985ceb'
+      settings-background: '#5cdfeb'
+      config-settings-color: '#985ceb'
+      config-settings-background: '#313941'
+      config-code-color: '#5cdfeb'
+      config-code-background: '#fff'
+      code-editor-color: '#000'
+      code-editor-background: '#fff'
+      widget-text-color: '#985ceb'
+      widget-background-color: '#313941'
+      widget-accent-color: '#5cdfeb'
+      widget-base-background: transparent
+      interactive-editor-color: '#985ceb'
+      interactive-editor-background: '#5cdfeb'
+      interactive-editor-background-darker: '#313941'
+      cloud-backup-color: '#985ceb'
+      cloud-backup-background: '#313941'
+      search-container-background: '#313941'
+      search-field-background: '#5cdfeb'
+      search-label-color: '#985ceb'
+      footer-text-color: '#5e6474'
+      footer-text-color-link: '#985ceb'
+      footer-background: '#313941'
+      context-menu-background: '#5cdfeb'
+      context-menu-color: '#985ceb'
+      context-menu-secondary-color: '#313941'
+      side-bar-background: '#313941'
+      side-bar-background-lighter: '#5cdfeb'
+      side-bar-color: '#985ceb'
+      side-bar-item-background: '#313941'
+      side-bar-item-color: '#985ceb'
+      workspace-web-content-background: '#5cdfeb'
+      minimal-view-background-color: '#5cdfeb'
+      minimal-view-title-color: '#985ceb'
+      minimal-view-settings-color: '#985ceb'
+      minimal-view-section-heading-color: '#985ceb'
+      minimal-view-section-heading-background: '#313941'
+      minimal-view-search-background: '#313941'
+      minimal-view-search-color: '#985ceb'
+      minimal-view-group-color: '#985ceb'
+      minimal-view-group-background: '#313941'
+      login-form-color: '#985ceb'
+      login-form-background: '#5cdfeb'
+      login-form-background-secondary: '#313941'
+      about-page-color: '#fff'
+      about-page-background: '#5cdfeb'
+      about-page-accent: '#985ceb'
+      scroll-bar-color: '#985ceb'
+      scroll-bar-background: '#313941'
+      highlight-color: '#5cdfeb'
+      highlight-background: '#985ceb'
+      progress-bar: '#985ceb'
+      loading-screen-color: '#985ceb'
+      loading-screen-background: '#5cdfeb'
+      status-check-tooltip-background: '#313941'
+      status-check-tooltip-color: '#985ceb'
+      welcome-popup-background: '#313941'
+      welcome-popup-text-color: '#985ceb'
+      toast-background: '#985ceb'
+      toast-color: '#5cdfeb'
+      description-tooltip-background: '#313941'
+      description-tooltip-color: '#985ceb'
+      outline-color: none
+      curve-factor: 5px
+      curve-factor-navbar: 16px
+      curve-factor-small: 2px
+      dimming-factor: '0.7'
+      scroll-bar-width: 8px
+      header-height: 6.3rem
+      footer-height: 128px
+      item-group-padding: 5px
+      item-shadow: '1px 1px 2px #130f23'
+      item-hover-shadow: '1px 2px 4px #373737'
+      item-icon-transform: drop-shadow(2px 4px 6px rgba(0,0,0,0.5019607843137255)) saturate(0.95)
+      item-icon-transform-hover: drop-shadow(4px 8px 3px rgba(0,0,0,0.5019607843137255)) saturate(2)
+      item-group-shadow: '1px 1px 2px #130f23'
+      context-menu-shadow: '1px 1px 2px #130f23'
+      section-max-height: 3000px
+      settings-container-shadow: none
+      side-bar-width: 3.5rem
+      tooltip-arrow-size: 6px
+      tooltip-width: 250px
+      tooltip-padding: 0.2rem
+      font-body: '"Raleway","Trebuchet MS",sans-serif'
+      font-headings: '"Inconsolata","Georgia",sans-serif'
+      font-monospace: '"PTMono","Courier New",monospace'
+  layout: auto
+  iconSize: large

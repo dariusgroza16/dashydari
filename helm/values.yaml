@@ -1,0 +1,10 @@
+image:
+  repository: dashy/dashy
+  tag: latest
+
+config:
+  path: /etc/dashy/conf.yaml
+
+service:
+  type: ClusterIP
+  port: 8080

@@ -1,0 +1,9 @@
+services:
+ dashy:
+  image: lissy93/dashy:latest
+  container_name: dashy_dari
+  ports: 
+    - 3001:8080
+  volumes:
+    - ./src/conf.yaml:/app/user-data/conf.yml
+  restart: no
