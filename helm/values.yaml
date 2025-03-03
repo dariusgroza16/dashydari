@@ -1,6 +1,7 @@
 image:
   repository: dashy/dashy
   tag: latest
+  pullPolicy: Always  
 
 config:
   path: /etc/dashy/conf.yaml

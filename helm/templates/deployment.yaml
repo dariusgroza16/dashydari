@@ -15,6 +15,7 @@ spec:
       containers:
         - name: dashy
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}  # Added this line
           ports:
             - containerPort: 8080
           volumeMounts:
