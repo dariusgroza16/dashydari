@@ -1,5 +1,5 @@
 image:
-  repository: dashy/dashy
+  repository: lissy93/dashy
   tag: latest
   pullPolicy: Always  
 

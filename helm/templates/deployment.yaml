@@ -12,6 +12,7 @@ spec:
       labels:
         app: {{ .Release.Name }}-dashy
     spec:
+      terminationGracePeriodSeconds: 10
       containers:
         - name: dashy
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
