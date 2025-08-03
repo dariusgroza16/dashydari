@@ -9,3 +9,10 @@ config:
 service:
   type: ClusterIP
   port: 8080
+
+ingress:
+  enabled: true
+  className: nginx
+  host: dashy.local
+  path: /
+  pathType: Prefix

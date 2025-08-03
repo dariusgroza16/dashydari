@@ -19,12 +19,12 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}  # Added this line
           ports:
             - containerPort: 8080
-          volumeMounts:
-            - name: config-volume
-              mountPath: {{ .Values.config.path }}
-              subPath: conf.yaml
-              readOnly: true
-      volumes:
-        - name: config-volume
-          configMap:
-            name: {{ .Release.Name }}-config
+      #     volumeMounts:
+      #       - name: config-volume
+      #         mountPath: {{ .Values.config.path }}
+      #         subPath: conf.yaml
+      #         readOnly: true
+      # volumes:
+      #   - name: config-volume
+      #     configMap:
+      #       name: {{ .Release.Name }}-config
