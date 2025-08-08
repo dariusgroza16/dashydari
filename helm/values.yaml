@@ -7,12 +7,12 @@ config:
   path: /etc/dashy/conf.yaml
 
 service:
-  type: ClusterIP
-  port: 8080
+  type: NodePort
+  port: 30069
 
 ingress:
   enabled: true
   className: nginx
-  host: dashy.local
+  host: dashy.suirad.dev
   path: /
   pathType: Prefix
