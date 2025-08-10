@@ -4,8 +4,8 @@ image:
   pullPolicy: Always  
 
 service:
-  type: ClusterIP
-  port: 8080
+  type: NodePort
+  port: 30069
 
 ingress:
   enabled: true
