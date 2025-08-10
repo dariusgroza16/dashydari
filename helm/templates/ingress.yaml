@@ -1,28 +1,34 @@
-{{- if .Values.ingress.enabled }}
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: {{ .Release.Name }}
+  name: dashydari
   labels:
-    app: {{ .Chart.Name }}
+    app: dashydari
   annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
-    # cert-manager.io/cluster-issuer: letsencrypt-prod   # Add cert-manager issuer annotation
+    cert-manager.io/cluster-issuer: local-ca   # or selfsigned-issuer
 spec:
   ingressClassName: nginx
   tls:
     - hosts:
-        - {{ .Values.ingress.host }}
-      secretName: {{ .Release.Name }}-tls-secret      # TLS secret to be created by cert-manager
+        - k3s.suirad.dev
+      secretName: dashydari-tls-secret
   rules:
-    - host: {{ .Values.ingress.host }}
+    - host: k3s.suirad.dev
       http:
         paths:
-          - path: {{ .Values.ingress.path }}
-            pathType: {{ .Values.ingress.pathType }}
+          - path: /
+            pathType: Prefix
             backend:
               service:
-                name: {{ .Release.Name }}
+                name: dashydari
                 port:
-                  number: {{ .Values.service.port }}
-{{- end }}
+                  number: 80
+    - http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: dashydari
+                port:
+                  number: 80

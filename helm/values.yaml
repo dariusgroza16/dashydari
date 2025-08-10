@@ -1,14 +1,14 @@
 image:
-  repository: lissy93/dashy
+  repository: dariusgroza16/homelab-fe
   tag: latest
   pullPolicy: Always  
 
 service:
   type: ClusterIP
-  port: 8080
+  port: 80
 
 ingress:
   enabled: true
   host: k3s.suirad.dev
-  path: /dashy
+  path: /
   pathType: Prefix
