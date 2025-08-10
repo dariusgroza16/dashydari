@@ -1,30 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ .Release.Name }}-dashy
+  name: {{ .Release.Name }}
+  labels:
+    app: {{ .Chart.Name }}
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: {{ .Release.Name }}-dashy
+      app: {{ .Chart.Name }}
   template:
     metadata:
       labels:
-        app: {{ .Release.Name }}-dashy
+        app: {{ .Chart.Name }}
     spec:
-      terminationGracePeriodSeconds: 10
       containers:
         - name: dashy
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
-          imagePullPolicy: {{ .Values.image.pullPolicy }}  # Added this line
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
             - containerPort: 8080
-      #     volumeMounts:
-      #       - name: config-volume
-      #         mountPath: {{ .Values.config.path }}
-      #         subPath: conf.yaml
-      #         readOnly: true
-      # volumes:
-      #   - name: config-volume
-      #     configMap:
-      #       name: {{ .Release.Name }}-config

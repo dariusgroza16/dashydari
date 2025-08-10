@@ -3,16 +3,12 @@ image:
   tag: latest
   pullPolicy: Always  
 
-config:
-  path: /etc/dashy/conf.yaml
-
 service:
   type: ClusterIP
   port: 8080
 
 ingress:
   enabled: true
-  className: nginx
-  host: dashy.local
-  path: /
+  host: k3s.suirad.dev
+  path: /dashy
   pathType: Prefix
