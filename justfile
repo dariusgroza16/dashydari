@@ -7,10 +7,15 @@ this_dir := justfile_directory()
 _default:
    just --list
 
-[doc("Install homelab helmchart")]
-install:
+[doc("Install homelab helmchart in staging")]
+install-staging:
   cd helm && \
-  helm install homelab .
+  helm install -f values-staging.yaml homelab .
+
+[doc("Install homelab helmchart in prod")]
+install-prod:
+  cd helm && \
+  helm install -f values-prod.yaml homelab .  
 
 [doc("Upgrade homelab helmchart")]
 upgrade:

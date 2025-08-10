@@ -1,0 +1,19 @@
+image:
+  repository: dariusgroza16/homelab-fe
+  tag: latest
+  pullPolicy: Always  
+
+deployment:
+  containerName: homelab
+  replicas: 1
+  containerPort: 3000
+
+service:
+  type: ClusterIP
+  port: 80
+
+ingress:
+  enabled: true
+  host: k3sforge.suirad.dev
+  path: /homelab
+  pathType: Prefix
