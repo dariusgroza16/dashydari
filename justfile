@@ -7,16 +7,16 @@ this_dir := justfile_directory()
 _default:
    just --list
 
-[doc("Install DashyDari helmchart")]
+[doc("Install homelab helmchart")]
 install:
   cd helm && \
-  helm install dashydari .
+  helm install homelab .
 
-[doc("Upgrade DashyDari helmchart")]
+[doc("Upgrade homelab helmchart")]
 upgrade:
   cd helm && \
-  helm upgrade dashydari .
+  helm upgrade homelab .
 
-[doc("Uninstall DashyDari helmchart")]
+[doc("Uninstall homelab helmchart")]
 uninstall:
-  helm uninstall dashydari
+  helm uninstall homelab

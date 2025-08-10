@@ -3,6 +3,11 @@ image:
   tag: latest
   pullPolicy: Always  
 
+deployment:
+  containerName: homelab
+  replicas: 1
+  containerPort: 3000
+
 service:
   type: ClusterIP
   port: 80
@@ -10,5 +15,5 @@ service:
 ingress:
   enabled: true
   host: k3s.suirad.dev
-  path: /
+  path: /homelab
   pathType: Prefix

@@ -1,34 +1,22 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: dashydari
+  name: {{ .Chart.Name }}
   labels:
-    app: dashydari
+    app: {{ .Chart.Name }}
   annotations:
-    cert-manager.io/cluster-issuer: local-ca   # or selfsigned-issuer
+    kubernetes.io/ingress.class: "nginx"
+    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   ingressClassName: nginx
-  tls:
-    - hosts:
-        - k3s.suirad.dev
-      secretName: dashydari-tls-secret
   rules:
-    - host: k3s.suirad.dev
+    - host: {{ .Values.ingress.host }}
       http:
         paths:
-          - path: /
-            pathType: Prefix
+          - path: {{ .Values.ingress.path }}
+            pathType: {{ .Values.ingress.pathType }}
             backend:
               service:
-                name: dashydari
+                name: {{ .Chart.Name }}
                 port:
-                  number: 80
-    - http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: dashydari
-                port:
-                  number: 80
+                  number: {{ .Values.service.port }}

@@ -5,7 +5,7 @@ metadata:
   labels:
     app: {{ .Chart.Name }}
 spec:
-  replicas: 1
+  replicas: {{ .Values.deployment.replicas }}
   selector:
     matchLabels:
       app: {{ .Chart.Name }}
@@ -15,8 +15,8 @@ spec:
         app: {{ .Chart.Name }}
     spec:
       containers:
-        - name: dashydari
+        - name: {{ .Values.deployment.containerName }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
-            - containerPort: 3000
+            - containerPort: {{ .Values.deployment.containerPort }}

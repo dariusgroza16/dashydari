@@ -1,3 +1,3 @@
-# dashydari
+# homelab
 # Install Helm Chart
-:~/repos/dashydari/helm$ helm install dashydari .
+:~/repos/homelab/helm$ helm install homelab .
