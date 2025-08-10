@@ -12,6 +12,11 @@ install:
   cd helm && \
   helm install dashydari .
 
+[doc("Upgrade DashyDari helmchart")]
+upgrade:
+  cd helm && \
+  helm upgrade dashydari .
+
 [doc("Uninstall DashyDari helmchart")]
 uninstall:
   helm uninstall dashydari
